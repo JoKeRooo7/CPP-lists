@@ -29,7 +29,7 @@ To build libraries, I use **Makefile**
 > make static_lib_STACK
 > ```
 > The static library will be placed in the directory ***libs*** with the name ***libstack.a***
-> ###**Build the dynamic library STACK**:
+> ### **Build the dynamic library STACK**:
 >___
 > To build the code as a dynamic library in ***src**, enter 
 > ```sh
