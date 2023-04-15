@@ -56,12 +56,14 @@ To build libraries, I use **Makefile**
     ```
 4. Functionality:
 ```cpp
-    Stack<int> a;    // stack declaration
-    a.push(123);     // Adding element 123 to the top of the stack
-    a.top();         // Returning an element from the top of the stack
-    a.pop();         // Removing an element from the top of the stack
-    a.print_all();   // Output of all stack elements starting from the top
-    a.clear_all();   // Clearing the stack of all elements
+        Stack<int> a;           // stack declaration
+        a.push(123);            // Adding element 123 to the top of the stack. 
+        a.top();                // Returning an element from the top of the stack
+        a.pop();                // Removing an element from the top of the stack
+        a.print_all();          // Output of all stack elements starting from the top
+        a.clear_all();          // Clearing the stack of all elements
+        if (a.push(123) == 0);  // Memory is allocated
+        if (a.push(123) != 0);  // No memory has been allocated, no item has been added
 ```
 
 # **LIFO**
