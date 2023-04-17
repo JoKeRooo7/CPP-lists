@@ -1,11 +1,11 @@
 # **Lists**
-I have implemented one of the buzz algorithms **STACK**...
+I have implemented one of the buzz algorithms **STACK**, **SLL**, ...
 
-1. ["**STACK**"](#Stack)
-2. ["**SLL**"](#SLL)
+1. [**STACK**](#**Stack**)
+2. [**SLL**](#**SLL** (Singly linked list))
 
 
-# **Stack **
+# **Stack**
 > **Stack** is an abstract data type, which is a list of elements obeying the rule **LIFO** (last in - first out). Stack is not a singly linked list, but it can be implemented with its help. The difference is that in the stack, the removal and addition of elements occurs only at the top.An
 example of such an implementation can be a stack of plates, a stack of notebooks, etc. 
 
