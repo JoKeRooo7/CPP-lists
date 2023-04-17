@@ -18,14 +18,21 @@ int SLL<T>::push_forward(T new_element) {
     node *new_list = new node;
     if (new_list != nullptr) {
         node *temp = list;
-        while (temp -> next != nullptr) {
-           temp = temp -> next;
-        } 
-        temp -> next = new_list;
-        new_list -> data = new_element;
-        new_list -> next = nullptr;
-        first_element = new_list;
-        index++;
+        if (temp != nullptr) {
+            while (temp -> next != nullptr) {
+                temp = temp -> next;
+            } 
+            temp -> next = new_list;
+            new_list -> data = new_element;
+            new_list -> next = nullptr;
+            first_element = new_list;
+            index++;
+        } else {
+            list = new_list;
+            list -> next = nullptr;
+            list -> data = new_element;
+            index++;
+        }
     } else {
         fail = 1;
     }
@@ -156,7 +163,7 @@ T SLL<T>::top_last() {
 //     a.push_back(7.3);
 //     a.push_forward(-32.2);
 //     a.print_all();
-//     // std::cout << a.top_first() << " " << a.top_last() << std::endl;
+//     std::cout << a.top_first() << " " << a.top_last() << std::endl;
 //     a.remove_last();
 //     a.push_back(123.4);
 //     a.remove_first();
