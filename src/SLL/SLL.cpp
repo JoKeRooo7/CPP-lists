@@ -15,7 +15,8 @@ SLL<T>::~SLL() {
 template <typename T>
 int SLL<T>::push_forward(T new_element) {
     int fail = 0;
-    node *new_list = new node;
+    node *new_list = nullptr;
+    new_list = new node;
     if (new_list != nullptr) {
         node *temp = list;
         if (temp != nullptr) {
@@ -43,7 +44,8 @@ int SLL<T>::push_forward(T new_element) {
 template <typename T>
 int SLL<T>::push_back(T new_element) {
     int fail = 0;
-    node *new_list = new node;
+    node *new_list = nullptr;
+    new_list = new node;
     if (new_list != nullptr) {
         new_list -> data = new_element;
         new_list -> next = list;
@@ -89,6 +91,7 @@ void SLL<T>::clear_all() {
         temp = list;
         list = list -> next;
         delete temp;
+        temp = nullptr;
     }
     first_element = nullptr;
     index = 0;
@@ -121,7 +124,7 @@ T SLL<T>::remove_first() { // if index 1
     if (temp != nullptr) {
         var = temp -> data;
         delete temp;
-        index--;
+        if (index > 0) index--;
         if (index == 0) {
             first_element = nullptr;
             list = nullptr;
@@ -141,7 +144,7 @@ T SLL<T>::remove_last() {
         output_data = temp -> data;
         list = list -> next;
         delete temp;
-        index--;
+        if (index > 0) index--;
     }
 
     return output_data;

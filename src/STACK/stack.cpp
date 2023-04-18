@@ -17,6 +17,7 @@ void Stack<T>::clear_all() {
         temp = a;
         a = a -> next;
         delete temp;
+        temp = nullptr;
     }
 }
 
@@ -34,7 +35,8 @@ void Stack<T>::print_all() {
 template <typename T>
 int Stack<T>::push(T new_element) {
     int fail = 0;
-    LIFO *new_lifo = new LIFO;
+    LIFO *new_lifo = nullptr;
+    new_lifo = new LIFO;
     if (new_lifo == nullptr) fail = 1;
     else {
         new_lifo -> data = new_element;
