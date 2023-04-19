@@ -1,6 +1,6 @@
 G++ = g++ -Wall -Werror -Werror
 
-all: static_lib_STACK dynamic_lib_STACK static_lib_SLL dynamic_lib_SLL
+all: static_lib_STACK dynamic_lib_STACK static_lib_SLL dynamic_lib_SLL static_lib_DLL dynamic_lib_DLL
 
 libclean:
 	rm -rf libs/*
@@ -24,3 +24,13 @@ dynamic_lib_SLL:
 	$(G++) -c -fPIC SLL/SLL.cpp -o SLL.o
 	g++ -shared -o libs/libSLL.so SLL.o
 	rm -rf SLL.o
+
+static_lib_DLL:
+	$(G++) -c  DLL/DLL.cpp -o DLL.o
+	ar rc libs/libSLL.a DLL.o
+	rm -rf DLL.o
+
+dynamic_lib_DLL:
+	$(G++) -c -fPIC DLL/DLL.cpp -o DLL.o
+	g++ -shared -o libs/libSLL.so DLL.o
+	rm -rf DLL.o
