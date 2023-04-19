@@ -27,10 +27,10 @@ dynamic_lib_SLL:
 
 static_lib_DLL:
 	$(G++) -c  DLL/DLL.cpp -o DLL.o
-	ar rc libs/libSLL.a DLL.o
+	ar rc libs/libDLL.a DLL.o
 	rm -rf DLL.o
 
 dynamic_lib_DLL:
 	$(G++) -c -fPIC DLL/DLL.cpp -o DLL.o
-	g++ -shared -o libs/libSLL.so DLL.o
+	g++ -shared -o libs/libDLL.so DLL.o
 	rm -rf DLL.o
