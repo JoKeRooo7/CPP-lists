@@ -146,6 +146,7 @@ T SLL<T>::remove_last() {
         delete temp;
         if (index > 0) index--;
     }
+    if (index == 0) first_element = nullptr;
 
     return output_data;
 }
