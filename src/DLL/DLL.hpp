@@ -18,12 +18,12 @@ class DLL {
         int insert_before_index(int find_index, T new_element);
         int insert_after_index(int find_index, T new_element);
         int find_index(T element);
+        int top_index();
         T find_by_index(int required_index);
         T remove_by_index(int find_index);
         T remove_element(T element);
         T remove_first();
         T remove_last();
-                T top_index();
         T top_first();
         T top_last();
     private:

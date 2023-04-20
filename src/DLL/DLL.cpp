@@ -212,7 +212,7 @@ T DLL<T>::top_last() {
 }
 
 template <typename T>
-T DLL<T>::top_index() {
+int DLL<T>::top_index() {
     return index;
 }
 
@@ -349,61 +349,3 @@ void DLL<T>::insert_mode_1(DLL<T>::node **new_temp, DLL<T>::node **temp) {
         list = (*new_temp);
     }
 }
-
-// int main() {
-//     DLL<int> a;
-//     a.push_back(1234);
-//     a.push_forward(1235);
-//     a.print_all();
-//     a.push_forward(1240);
-//     a.insert_after_element(1240, 1241);
-//     a.insert_before_element(1240, 1239);
-//     // a.print_all_reverse();
-//     a.print_all();
-//     a.insert_before_element(1239, 1238);
-//     std::cout << a.find_by_index(2) << std::endl;
-//     a.print_all();
-//     std::cout << a.find_index(1235) << std::endl;
-//     a.insert_before_element(1238, 1237);
-//     a.print_all();
-//     std::cout << a.top_first() << std::endl;
-//     std::cout << a.top_last() << std::endl;
-//     std::cout << a.top_index() << std::endl;
-//     a.insert_before_element(1237, 1236);
-//     a.insert_after_index(1, 1242);
-//     a.insert_before_index(1, 9);
-//     a.print_all();
-//     std::cout << a.remove_by_index(2) << std::endl;
-//     std::cout << a.remove_element(1236) << std::endl;
-//     a.print_all();
-//     a.insert_after_index(1, 1243);
-//     a.insert_before_index(1, 9);
-//     a.print_all_reverse();
-//     a.insert_before_index(1, 9);
-
-//     a.print_all();
-//     a.remove_first();
-//     a.print_all();
-//     a.remove_first();
-//     a.print_all();
-//     a.remove_first();
-//     a.print_all();
-//     std::cout << a.top_first() << std::endl;
-//     std::cout << a.top_last() << std::endl;
-//     std::cout << a.top_index() << std::endl;
-//     a.remove_first();
-//     a.print_all();
-//     a.remove_last();
-//     a.print_all();
-//     a.remove_first();
-//     a.print_all();
-//     a.clear_all();
-//     std::cout << a.find_by_index(2) << std::endl;
-//     std::cout << a.find_index(1235) << std::endl;
-//     std::cout << a.remove_by_index(2) << std::endl;
-//     std::cout << a.remove_element(2) << std::endl;
-//     std::cout << a.top_first() << std::endl;
-//     std::cout << a.top_last() << std::endl;
-//     std::cout << a.top_index() << std::endl;
-//     a.print_all();
-// }
